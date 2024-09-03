@@ -4,15 +4,29 @@
 #include <iostream>
 #include "Calzado.h";
 #include "ManejadorCalzado.h";
+using namespace std;
 int main()
 {
     
     //declaracion de los objetos
+	Calzado cal1, cal2, manejador;
 
     //implementacion de la logica utilizando la clase ManejadorCalzado
 
+    int resp;
+    cin>> resp;
+	cal1.randomizar();
+	cal2.randomizar();
+    std::cout << "Juego de Calzados, Adivina los pares (1 para sí, 0 para no)!!\n";
+	cal1.verDatos();
+	cal2.verDatos();
+	if (manejador.CompararCalzados(cal1, cal2) || resp == 1) {
+		std:: cout << "formarian pares";
+	}
+	else
+      cout << "no formarian pares";
+	return 0;
 
-    std::cout << "Juego de Calzados, Adivina los pares!!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
